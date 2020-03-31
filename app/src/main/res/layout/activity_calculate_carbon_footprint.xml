@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateCarbonFootprintActivity">
+
+    <include
+        android:id="@+id/carbo_footprint_bar_layout"
+        layout="@layout/app_bar_layout"
+        >
+    </include>
+
+    <Spinner
+        android:id="@+id/spinnerFuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:entries="@array/fueltype"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/inputs"/>
+
+    <EditText
+        android:id="@+id/editTextkm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Enter Distance in Km"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/spinnerFuel"
+        android:background="@drawable/inputs"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Calculate"
+        android:textColor="@color/White"
+        android:layout_below="@+id/editTextkm"
+        android:background="@drawable/buttons"
+        />
+
+    <EditText
+        android:id="@+id/editTextCF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint=""
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/buttonCalculate"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/inputs"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/editTextmil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Mileage"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/editTextkm"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        />
+</RelativeLayout>
